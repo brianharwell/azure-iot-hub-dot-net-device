@@ -2,16 +2,24 @@
 using System.Threading.Tasks;
 using Microsoft.Azure.Devices;
 using Microsoft.Azure.Devices.Common.Exceptions;
+using Microsoft.Extensions.Configuration;
 
 namespace CreateDeviceIdentity
 {
     public class Program
     {
         static RegistryManager registryManager;
-        static string connectionString = "HostName=raspberrystreetdemo.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=QQv/MMvl8PaU7Lt9reZmnXTRS6QXWmK74uvX0kXygo4=";
-
+        
         public static void Main(string[] args)
         {
+            var builder = new ConfigurationBuilder();
+
+            builder.AddUserSecrets("User-Secret-ID");
+
+            var configurationRoot = builder.Build();
+
+            var connectionString = $"HostName=raspberrystreetdemo.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey={configurationRoot["iothub-owner-sas"]}";
+
             registryManager = RegistryManager.CreateFromConnectionString(connectionString);
             AddDeviceAsync().Wait();
             Console.ReadLine();
