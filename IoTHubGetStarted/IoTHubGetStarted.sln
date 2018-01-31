@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDeviceIdentity", "CreateDeviceIdentity\CreateDeviceIdentity.csproj", "{917BE70C-D81D-4527-84C6-0CF75E52CD01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadDeviceToCloudMessages", "ReadDeviceToCloudMessages\ReadDeviceToCloudMessages.csproj", "{2A57AD0B-3D44-42DF-A609-7FF3DCEC0416}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{917BE70C-D81D-4527-84C6-0CF75E52CD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{917BE70C-D81D-4527-84C6-0CF75E52CD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{917BE70C-D81D-4527-84C6-0CF75E52CD01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A57AD0B-3D44-42DF-A609-7FF3DCEC0416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A57AD0B-3D44-42DF-A609-7FF3DCEC0416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A57AD0B-3D44-42DF-A609-7FF3DCEC0416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A57AD0B-3D44-42DF-A609-7FF3DCEC0416}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
